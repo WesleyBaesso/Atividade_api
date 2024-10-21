@@ -76,6 +76,12 @@ app.delete('/item', (req, res) => {
     res.status(200).json({message: "Tudo foi removido"})
 })
 
+// Atividade 5 //
+app.get('/items/count', (req, res) => {
+    const count = items.length; // Obtém a quantidade de itens
+    res.json({ count }); // Retorna a resposta como um objeto
+});
+
 app.listen(port, () => {
     console.log(`O servidor está rodando em http://localhost:${port}`);
 })
